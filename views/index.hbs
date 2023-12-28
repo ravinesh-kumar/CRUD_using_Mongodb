@@ -1,0 +1,39 @@
+{{>header}}
+    <title>CRUD APPLICATION</title>
+{{>navbar}}
+<div class="container-fluid mt-3">
+    <h5 class="kaalar text-light p-3 text-center"  >Employee Table</h5>
+   <div class="table-responsive">
+     <table class="table table-stripped table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile Number</th>
+                <th>Desigination</th>
+                <th>Salary</th>
+                <th>City</th>
+                <th>State</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {{# each data}}
+            <tr>
+                <td>{{name}}</td>
+                <td> <a href="mailto:{{email}}"></a> {{email}}</td>
+                <td> <a href="tel:{{phone}}"></a> {{phone}}</td>
+                <td>{{desigination}}</td>
+                <td>{{salary}}</td>
+                <td>{{city}}</td>
+                <td>{{state}}</td>
+                <td> <a href="/edit/{{_id}}"><span class="material-symbols-outlined">edit </span></a> </td>
+                <td> <a href="/delete/{{_id}}"><span class="material-symbols-outlined">delete </span></a> </td>
+                </tr>
+           
+            {{/ each}}
+        </tbody>
+    </table>
+   </div>
+</div>
+{{>footer}}

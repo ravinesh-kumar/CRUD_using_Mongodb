@@ -1,0 +1,47 @@
+{{>header}}
+
+    <title>Edit</title>
+{{>navbar}}
+    <div class="container mt-4">
+        <h5 class="container-fluid text-light text-center kaalar mt-5 p-3">Update Employee record</h5>
+        <form action="/edit/{{data._id}}" method="post">
+        <div class="mb-3">
+            <label  class="form-label">Name <span class="text-danger">*</span> </label>
+            <input type="text" name="name" required="Required field" placeholder="Enter full Name" value="{{data.name}}" class="form-control">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                     <label  class="form-label">Email <span class="text-danger">*</span> </label>
+                    <input type="email" name="email" required="Required field" value="{{data.email}}" placeholder="enter email" class="form-control">
+                </div>
+                <div class="col-md-6">
+                      <label  class="form-label">Mobile Number <span class="text-danger">*</span> </label>
+                    <input type="number" name="phone" required="Required field" value="{{data.phone}}" placeholder="Enter Mobile Number" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                     <label  class="form-label">Salary <span class="text-danger">*</span> </label>
+                    <input type="text" name="salary" required="Required field" value="{{data.salary}}" placeholder="Enter Salary" class="form-control">
+                </div>
+                <div class="col-md-6">
+                      <label  class="form-label">Desigination <span class="text-danger">*</span> </label>
+                    <input type="text" name="desigination" required="Required field" value="{{data.desigination}}" placeholder="Enter Desigination" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                     <label  class="form-label">State <span class="text-danger">*</span> </label>
+                    <input type="text" name="state" value="{{data.state}}" placeholder="Enter State" class="form-control">
+                </div>
+                <div class="col-md-6">
+                      <label  class="form-label">City <span class="text-danger">*</span> </label>
+                    <input type="text" name="city" value="{{data.city}}" placeholder="Enter City" class="form-control">
+                </div>
+            </div>
+           <button type="submit" class="form-control p-2 kaalar text-light">Submit</button>
+            
+        </div>
+        </form>
+    </div>
+
+{{>footer}}

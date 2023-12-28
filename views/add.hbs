@@ -1,0 +1,47 @@
+{{>header}}
+
+    <title>Add</title>
+{{>navbar}}
+    <div class="container mt-4">
+        <h5 class="container-fluid text-light text-center kaalar mt-5 p-3">Add Employee record</h5>
+        <form action="/add" method="post">
+        <div class="mb-3">
+            <label  class="form-label">Name <span class="text-danger">*</span> </label>
+            <input type="text" name="name" required="Required field" placeholder="Enter full Name" class="form-control">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                     <label  class="form-label">Email <span class="text-danger">*</span> </label>
+                    <input type="email" name="email" required="Required field" placeholder="enter email" class="form-control">
+                </div>
+                <div class="col-md-6">
+                      <label  class="form-label">Mobile Number <span class="text-danger">*</span> </label>
+                    <input type="text" name="phone" required="Required field" placeholder="Enter Mobile Number" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                     <label  class="form-label">Salary <span class="text-danger">*</span> </label>
+                    <input type="text" name="salary" required="Required field" placeholder="Enter Salary" class="form-control">
+                </div>
+                <div class="col-md-6">
+                      <label  class="form-label">Desigination <span class="text-danger">*</span> </label>
+                    <input type="text" name="desigination" required="Required field" placeholder="Enter Desigination" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                     <label  class="form-label">State <span class="text-danger">*</span> </label>
+                    <input type="text" name="state" placeholder="Enter State" class="form-control">
+                </div>
+                <div class="col-md-6">
+                      <label  class="form-label">City <span class="text-danger">*</span> </label>
+                    <input type="text" name="city" placeholder="Enter City" class="form-control">
+                </div>
+            </div>
+           <button type="submit" class="form-control p-2 kaalar text-light">Submit</button>
+            
+        </div>
+        </form>
+    </div>
+
+{{>footer}}
